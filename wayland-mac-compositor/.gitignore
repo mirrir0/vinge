@@ -1,0 +1,25 @@
+# Zig
+zig-out/
+zig-cache/
+
+# Swift
+.build/
+.swiftpm/
+Package.resolved
+
+# OS
+.DS_Store
+.Spotlight-V100
+.Trashes
+
+# IDE
+.vscode/
+.idea/
+*.xcodeproj
+*.xcworkspace
+
+# Test results
+tests/results/
+
+# Local configuration
+config.toml

@@ -1,0 +1,70 @@
+# Wayland macOS Compositor Configuration
+# Place this file at ~/.config/wayland-mac-compositor/config.toml
+
+[window]
+# Initial window dimensions
+width = 1024
+height = 768
+title = "Wayland Compositor"
+# Whether to remember window position between sessions
+remember_position = true
+# Default window position (if remember_position is false)
+default_x = 100
+default_y = 100
+
+[rendering]
+# Enable VSync
+vsync = true
+# Display scale factor (1.0 = 100%)
+scale = 1.0
+# Maximum frame rate (0 = unlimited)
+max_fps = 60
+# Enable Metal GPU acceleration
+gpu_acceleration = true
+# Preferred Metal device (empty = automatic)
+preferred_gpu = ""
+# Buffer swap strategy: "immediate", "fifo", or "mailbox"
+swap_strategy = "fifo"
+
+[input]
+# Input event handling rate in Hz
+input_rate = 125
+# Mouse acceleration (1.0 = system default)
+mouse_acceleration = 1.0
+# Key repeat delay in milliseconds
+key_repeat_delay = 500
+# Key repeat rate in milliseconds
+key_repeat_rate = 30
+
+[debug]
+# Enable debug logging
+enable_logging = false
+# Log level: "error", "warn", "info", "debug", "trace"
+log_level = "info"
+# Log file path (empty = stdout)
+log_file = ""
+# Enable performance metrics
+enable_metrics = false
+# Metrics reporting interval in seconds
+metrics_interval = 5
+
+[protocols]
+# Enable/disable specific Wayland protocols
+xdg_shell = true
+xdg_decoration = true
+linux_dmabuf = false
+viewporter = true
+relative_pointer = true
+pointer_constraints = true
+keyboard_shortcuts_inhibit = true
+
+[security]
+# Allow/deny specific clients
+allow_clients = ["org.freedesktop.*", "com.example.*"]
+deny_clients = []
+# Enable sandbox restrictions
+enable_sandbox = true
+# Maximum client memory in MB
+max_client_memory = 512
+# Maximum number of clients
+max_clients = 10
